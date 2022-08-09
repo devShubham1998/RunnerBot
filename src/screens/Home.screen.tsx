@@ -49,6 +49,7 @@ const Home = () => {
       title: 'Not Contacted Cases',
       icon: 'calendar-times',
       screenType: 'Individual',
+      screenData: 'NotContactedCases',
       m: 5,
     },
     {

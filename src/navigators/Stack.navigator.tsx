@@ -4,6 +4,7 @@ import DrawerNavigator from './Drawer.navigator';
 import TileScreen from '../screens/Tile.screen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {appColors} from '../config/env';
+import NotContactedCases from '../screens/NotContactedCases.srceen';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +23,11 @@ const StackNavigator = () => {
       <Stack.Screen
         name="TileScreen"
         component={TileScreen}
+        options={{headerShown: true, orientation: 'portrait', headerTitle: ''}}
+      />
+      <Stack.Screen
+        name="NotContactedCases"
+        component={NotContactedCases}
         options={{headerShown: true, orientation: 'portrait', headerTitle: ''}}
       />
     </Stack.Navigator>

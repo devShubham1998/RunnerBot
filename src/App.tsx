@@ -20,6 +20,7 @@ import DrawerNavigator from './navigators/Drawer.navigator';
 import Appointments from './screens/Appointments.screen';
 import TileScreen from './screens/Tile.screen';
 import StackNavigator from './navigators/Stack.navigator';
+import Toast from 'react-native-toast-message';
 
 const MyTheme = {
   ...DefaultTheme,
@@ -38,6 +39,7 @@ const App = () => {
           <StackNavigator />
         </NavigationContainer>
       </ImageBackground>
+      <Toast />
     </SafeAreaView>
   );
 };

@@ -24,8 +24,11 @@ const SingleTile = ({
   return (
     <TouchableOpacity
       onPress={() => {
-        if (screenType === 'TileScreen')
+        if (screenType === 'TileScreen') {
           navigation.navigate('TileScreen', {title, screenData});
+        } else if (screenType === 'Individual') {
+          navigation.navigate(screenData, {title});
+        }
       }}
       style={{margin: m}}>
       <View

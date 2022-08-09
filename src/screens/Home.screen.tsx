@@ -64,6 +64,7 @@ const Home = () => {
       title: 'Update Contact',
       icon: 'address-card',
       screenType: 'Individual',
+      screenData: 'UpdateContact',
       m: 5,
     },
     {

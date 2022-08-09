@@ -5,6 +5,7 @@ import TileScreen from '../screens/Tile.screen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {appColors} from '../config/env';
 import NotContactedCases from '../screens/NotContactedCases.srceen';
+import UpdateContact from '../screens/UpdateContact.screen';
 
 const Stack = createNativeStackNavigator();
 
@@ -28,7 +29,20 @@ const StackNavigator = () => {
       <Stack.Screen
         name="NotContactedCases"
         component={NotContactedCases}
-        options={{headerShown: true, orientation: 'portrait', headerTitle: ''}}
+        options={{
+          headerShown: true,
+          orientation: 'portrait',
+          headerTitle: 'Not Contacted Cases',
+        }}
+      />
+      <Stack.Screen
+        name="UpdateContact"
+        component={UpdateContact}
+        options={{
+          headerShown: true,
+          orientation: 'portrait',
+          headerTitle: 'Update Contact',
+        }}
       />
     </Stack.Navigator>
   );

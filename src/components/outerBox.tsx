@@ -6,12 +6,14 @@ type outerBoxProps = {
   title: string; // Title of outerBox
   pt?: number; // padding of title of outerBox
   pb?: number; // padding of body of outerBox
+  w?: number; // width of outerbox
 };
 const outerBox = (Component: JSX.IntrinsicAttributes) => {
   return ({
     title,
     pt = outerBoxProp.paddingTitle,
     pb = outerBoxProp.paddingBody,
+    w = outerBoxProp.width,
   }: outerBoxProps) => (
     <View
       style={{
@@ -27,6 +29,7 @@ const outerBox = (Component: JSX.IntrinsicAttributes) => {
           borderRadius: outerBoxProp.borderRadius,
           borderWidth: outerBoxProp.borderWidth,
           borderColor: appColors.outerBoxBorderColor,
+          width: w,
         }}>
         <View
           style={{
@@ -37,8 +40,13 @@ const outerBox = (Component: JSX.IntrinsicAttributes) => {
             padding: pt,
             backgroundColor: outerBoxProp.titleBackColor,
           }}>
-          <Text style={{fontSize: fontSize.l, color: outerBoxProp.titleColor}}>
-            {title}{' '}
+          <Text
+            style={{
+              fontSize: fontSize.l,
+              color: outerBoxProp.titleColor,
+              textAlign: 'center',
+            }}>
+            {title}
           </Text>
         </View>
         <View

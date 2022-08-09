@@ -5,14 +5,16 @@ import {appColors, width} from '../config/env';
 type customButtonProps = {
   title: string;
   type: string;
-  onPressFn: Function;
+  onPressFn: any;
+  style: any;
 };
 
-const CustomButton = ({title, type, onPressFn}: customButtonProps) => {
+const CustomButton = ({title, type, onPressFn, style}: customButtonProps) => {
   return (
     <TouchableOpacity
       onPress={onPressFn}
       style={{
+        ...style,
         backgroundColor:
           type === 'p'
             ? appColors.primary

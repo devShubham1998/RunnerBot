@@ -24,6 +24,7 @@ export const appColors = {
   outerBoxBorderColor: ternary,
   outerBoxBorderWidth: 2,
   white: white,
+  ibc: 'rgba(20,20,20,0.3)', // input border color
 };
 
 export const outerBoxProp = {
@@ -35,6 +36,7 @@ export const outerBoxProp = {
   titleColor: white,
   paddingTitle: 10,
   paddingBody: 20,
+  width: 300,
 };
 
 export const fontSize = {

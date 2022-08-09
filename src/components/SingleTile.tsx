@@ -27,7 +27,7 @@ const SingleTile = ({
         if (screenType === 'TileScreen') {
           navigation.navigate('TileScreen', {title, screenData});
         } else if (screenType === 'Individual') {
-          navigation.navigate(screenData, {title});
+          screenData && navigation.navigate(screenData);
         }
       }}
       style={{margin: m}}>

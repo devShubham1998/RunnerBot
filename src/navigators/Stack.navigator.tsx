@@ -6,6 +6,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {appColors} from '../config/env';
 import NotContactedCases from '../screens/NotContactedCases.srceen';
 import UpdateContact from '../screens/UpdateContact.screen';
+import OtherActivities from '../screens/OtherActivities.screen';
 
 const Stack = createNativeStackNavigator();
 
@@ -42,6 +43,15 @@ const StackNavigator = () => {
           headerShown: true,
           orientation: 'portrait',
           headerTitle: 'Update Contact',
+        }}
+      />
+      <Stack.Screen
+        name="OtherActivities"
+        component={OtherActivities}
+        options={{
+          headerShown: true,
+          orientation: 'portrait',
+          headerTitle: 'Other Activities',
         }}
       />
     </Stack.Navigator>

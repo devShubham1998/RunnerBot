@@ -72,6 +72,7 @@ const Home = () => {
       title: 'Other Activities',
       icon: 'calendar-check',
       screenType: 'Individual',
+      screenData: 'OtherActivities',
       m: 5,
     },
   ];

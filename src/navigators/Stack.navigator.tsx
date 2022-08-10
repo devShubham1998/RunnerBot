@@ -7,6 +7,7 @@ import {appColors} from '../config/env';
 import NotContactedCases from '../screens/NotContactedCases.srceen';
 import UpdateContact from '../screens/UpdateContact.screen';
 import OtherActivities from '../screens/OtherActivities.screen';
+import LoginScreen from '../screens/Login.screen';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,11 @@ const StackNavigator = () => {
         headerStyle: {backgroundColor: appColors.headerTitleBack},
         headerTintColor: appColors.headerTitleText,
       }}>
+      <Stack.Screen
+        name="LoginScreen"
+        component={LoginScreen}
+        options={{headerShown: false, orientation: 'portrait', headerTitle: ''}}
+      />
       <Stack.Screen
         name="BottomTabs"
         component={DrawerNavigator}

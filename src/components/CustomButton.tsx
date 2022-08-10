@@ -6,25 +6,40 @@ type customButtonProps = {
   title: string;
   type: string;
   onPressFn: any;
-  style: any;
+  style?: any;
+  bc?: string;
+  bgc?: string; // background color
+  br?: number; // border radius
+  w?: number; // width
+  sc?: string; // shadow color
 };
 
-const CustomButton = ({title, type, onPressFn, style}: customButtonProps) => {
+const CustomButton = ({
+  title,
+  type,
+  bc,
+  onPressFn,
+  style,
+  bgc = 'rgba(6,146,239,1)',
+  br = 30,
+  w = 250,
+  sc = 'rgba(6,146,239,1)',
+}: customButtonProps) => {
   return (
     <TouchableOpacity
       onPress={onPressFn}
       style={{
-        ...style,
-        backgroundColor:
-          type === 'p'
-            ? appColors.primary
-            : type === 's'
-            ? appColors.secondary
-            : appColors.ternary,
+        backgroundColor: bgc,
         padding: 10,
-        borderRadius: 5,
+        borderRadius: br,
         alignItems: 'center',
-        width: width.b,
+        shadowColor: sc,
+        elevation: 8,
+        shadowRadius: 8,
+        shadowOffset: {width: 0, height: 5},
+        shadowOpacity: 1.0,
+        width: w,
+        ...style,
       }}>
       <Text style={{color: appColors.white}}>{title}</Text>
     </TouchableOpacity>

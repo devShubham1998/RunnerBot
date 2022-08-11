@@ -1,6 +1,7 @@
 import {View, Text, FlatList} from 'react-native';
 import React from 'react';
 import SingleTile from '../components/SingleTile';
+import {appColors} from '../config/env';
 
 const TileScreen = ({navigation, route}) => {
   console.log(route.params, navigation);
@@ -16,7 +17,7 @@ const TileScreen = ({navigation, route}) => {
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <View
         style={{
-          backgroundColor: 'rgba(52, 52, 52, 0.3)',
+          backgroundColor: appColors.ternary,
           padding: 10,
           borderRadius: 5,
           height: DATA.reduce(

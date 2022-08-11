@@ -3,18 +3,9 @@ import React, {useCallback, useState} from 'react';
 import {appColors, width} from '../config/env';
 import CustomButton from './CustomButton';
 import showToast from '../helpers/showToast';
-import CustomDropdown from './CustomDropdown';
 
-const OtherActivities = () => {
+const TransferAppointments = () => {
   const [policyNo, setPolicyNo] = useState('');
-  const [dropdownValue, setDropdownValue] = useState(null);
-
-  const dropdownData = [
-    {label: 'Send e-mandate Link', value: '1'},
-    {label: 'Send Online Payment Link', value: '2'},
-    {label: 'Cross Sell Lead', value: '3'},
-  ];
-
   const btnSubmit = useCallback(() => {
     if (policyNo == '') {
       showToast('Policy No Error!', 'Please Enter valid policy No.', 'error');
@@ -34,12 +25,6 @@ const OtherActivities = () => {
           borderColor: appColors.ibc,
         }}
       />
-      <CustomDropdown
-        label="Please select your option"
-        dropdownValue={dropdownValue}
-        setDropdownValue={setDropdownValue}
-        dropdownData={dropdownData}
-      />
       <CustomButton
         title="SUBMIT"
         type="t"
@@ -50,4 +35,4 @@ const OtherActivities = () => {
   );
 };
 
-export default OtherActivities;
+export default TransferAppointments;

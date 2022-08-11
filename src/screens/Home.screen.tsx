@@ -2,6 +2,7 @@ import {View, Text, FlatList} from 'react-native';
 import React from 'react';
 import SingleTile from '../components/SingleTile';
 import {DrawerItem} from '@react-navigation/drawer';
+import {appColors} from '../config/env';
 
 const Home = () => {
   const DATA = [
@@ -32,6 +33,7 @@ const Home = () => {
           title: 'Past Appointments',
           icon: 'file-signature',
           screenType: 'Individual',
+          screenData: 'PastAppointment',
           m: 5,
         },
         {
@@ -39,6 +41,7 @@ const Home = () => {
           title: 'Transfer Appointments',
           icon: 'file-signature',
           screenType: 'Individual',
+          screenData: 'TransferAppointments',
           m: 5,
         },
       ],
@@ -81,7 +84,7 @@ const Home = () => {
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <View
         style={{
-          backgroundColor: 'rgba(52, 52, 52, 0.3)',
+          backgroundColor: appColors.ternary,
           padding: 10,
           borderRadius: 5,
           height: DATA.reduce(

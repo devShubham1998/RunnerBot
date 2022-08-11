@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import backImg from './assets/img/background1.jpg';
+import backImg from './assets/img/background3.jpg';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
 import CustomDrawer from './components/CustomDrawer';
@@ -34,11 +34,11 @@ const App = () => {
   return (
     <SafeAreaView style={{flex: 1}}>
       <StatusBar animated={true} showHideTransition={'fade'} hidden={true} />
-      {/* <ImageBackground source={backImg} style={{flex: 1}}> */}
-      <NavigationContainer theme={MyTheme}>
-        <StackNavigator />
-      </NavigationContainer>
-      {/* </ImageBackground> */}
+      <ImageBackground source={backImg} style={{flex: 1}}>
+        <NavigationContainer theme={MyTheme}>
+          <StackNavigator />
+        </NavigationContainer>
+      </ImageBackground>
       <Toast />
     </SafeAreaView>
   );

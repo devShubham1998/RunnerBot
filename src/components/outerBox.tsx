@@ -7,6 +7,10 @@ type outerBoxProps = {
   pt?: number; // padding of title of outerBox
   pb?: number; // padding of body of outerBox
   w?: number; // width of outerbox
+  bc?: string;
+  bgc?: string;
+  br?: number;
+  bw?: number;
 };
 const outerBox = (Component: JSX.IntrinsicAttributes) => {
   return ({
@@ -14,6 +18,10 @@ const outerBox = (Component: JSX.IntrinsicAttributes) => {
     pt = outerBoxProp.paddingTitle,
     pb = outerBoxProp.paddingBody,
     w = outerBoxProp.width,
+    bgc = 'rgba(6,146,239,1)',
+    bc = 'rgba(6,146,239,1)',
+    br = 5,
+    bw = 1,
   }: outerBoxProps) => (
     <View
       style={{
@@ -26,19 +34,23 @@ const outerBox = (Component: JSX.IntrinsicAttributes) => {
           alignItems: 'center',
           justifyContent: 'center',
           padding: 0,
-          borderRadius: outerBoxProp.borderRadius,
-          borderWidth: outerBoxProp.borderWidth,
-          borderColor: appColors.outerBoxBorderColor,
+          borderRadius: br,
+          borderWidth: bw,
+          borderColor: bgc,
           width: w,
+          shadowColor: bgc,
+          elevation: 8,
+          shadowOffset: {width: 5, height: 5},
+          backgroundColor: '#fff',
         }}>
         <View
           style={{
             borderBottomWidth: outerBoxProp.borderWidth,
-            borderColor: outerBoxProp.borderColor,
+            borderColor: bc,
             alignSelf: 'stretch',
             alignItems: 'center',
             padding: pt,
-            backgroundColor: outerBoxProp.titleBackColor,
+            backgroundColor: bc,
           }}>
           <Text
             style={{

@@ -7,6 +7,8 @@ import {useNavigation} from '@react-navigation/native';
 type singleTileType = {
   title: string;
   icon: string;
+  bc: string;
+  c: string;
   m: number;
   screenType?: string;
   screenData?: any;
@@ -15,6 +17,8 @@ type singleTileType = {
 const SingleTile = ({
   title,
   icon,
+  bc = 'rgba(6,146,239,1)',
+  c = '#fff',
   m,
   screenType,
   screenData,
@@ -36,7 +40,7 @@ const SingleTile = ({
           width: 250,
           height: h,
           flexDirection: 'row',
-          backgroundColor: appColors.color1,
+          backgroundColor: bc,
           paddingLeft: 30,
           paddingTop: 10,
           paddingRight: 30,
@@ -49,7 +53,7 @@ const SingleTile = ({
         <FontAwesome5 name={icon} size={22} color={appColors.textColor1} />
         <Text
           style={{
-            color: appColors.textColor1,
+            color: c,
             fontSize: 15,
             fontFamily: 'Roboto-Medium',
             marginLeft: 15,

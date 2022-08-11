@@ -13,17 +13,19 @@ import {
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import { appColors } from '../config/env';
+import {appColors} from '../config/env';
 
 const CustomDrawer = props => {
   return (
     <View style={{flex: 1}}>
       <DrawerContentScrollView
         {...props}
-        contentContainerStyle={{backgroundColor: appColors.color3}}>
-        <ImageBackground
-          source={require('../assets/img/drawer-header1.jpg')}
-          style={{padding: 20}}>
+        contentContainerStyle={{
+          backgroundColor: appColors.primary,
+        }}>
+        <View style={{padding: 20}}>
+          {/* <ImageBackground source={''} style={{padding: 20}}> */}
+
           <Image
             source={require('../assets/img/avatar.png')}
             style={{height: 80, width: 80, borderRadius: 40, marginBottom: 10}}
@@ -48,22 +50,24 @@ const CustomDrawer = props => {
             </Text>
             <FontAwesome5 name="phone-square" size={14} color="#fff" />
           </View>
-        </ImageBackground>
+          {/* </ImageBackground> */}
+        </View>
         <View style={{flex: 1, backgroundColor: '#fff', paddingTop: 10}}>
           {/* <DrawerItemList {...props} /> */}
           <TouchableOpacity onPress={() => {}}>
-            <View style={{flexDirection: 'row', padding: 20, alignItems: 'center'}}>
-                <FontAwesome5 name="address-card" size={22} />
-                <Text
+            <View
+              style={{flexDirection: 'row', padding: 20, alignItems: 'center'}}>
+              <FontAwesome5 name="address-card" size={22} />
+              <Text
                 style={{
-                    fontSize: 15,
-                    fontFamily: 'Roboto-Medium',
-                    marginLeft: 5,
+                  fontSize: 15,
+                  fontFamily: 'Roboto-Medium',
+                  marginLeft: 5,
                 }}>
                 My Profile
-                </Text>
-            </View>  
-          </TouchableOpacity>        
+              </Text>
+            </View>
+          </TouchableOpacity>
         </View>
       </DrawerContentScrollView>
       <View style={{padding: 20, borderTopWidth: 1, borderTopColor: '#ccc'}}>

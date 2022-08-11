@@ -1,6 +1,6 @@
-const primary = '#014CA9';
-const secondary = '#1E6ED1';
-const ternary = '#5BA0F6';
+const primary = 'rgba(6,146,239,1)'; // '#014CA9';
+const secondary = 'rgba(6,146,239,1)'; //'#1E6ED1';
+const ternary = 'rgba(6,146,239,0.3)'; //'#5BA0F6';
 const white = '#fff';
 const black = '#000';
 const primary80 = 'rgba(1, 76, 169, 0.8)';
@@ -18,7 +18,7 @@ export const appColors = {
   color1o5: 'rgba(39,68,144,0.5)',
   color1o8: 'rgba(39,68,144,0.8)',
   textColor1: '#fff',
-  headerTitleBack: ternary50,
+  headerTitleBack: primary,
   headerTitleText: white,
   outerBoxTitleBackColor: ternary,
   outerBoxBorderColor: ternary,

@@ -1,9 +1,12 @@
 import {View, Text, ImageBackground, Image} from 'react-native';
-import React from 'react';
+import React, {useCallback} from 'react';
 import CustomInput from '../components/CustomInput';
 import CustomButton from '../components/CustomButton';
 
-const Login = () => {
+const Login = ({navigation, route}) => {
+  const submitClicked = useCallback(() => {
+    navigation.replace('BottomTabs');
+  }, []);
   return (
     <View style={{flex: 1}}>
       <ImageBackground
@@ -17,7 +20,12 @@ const Login = () => {
         <Text style={{marginBottom: 40}}>Login to your account.</Text>
         <CustomInput icon="email" pht="Runner ID" style={{marginBottom: 30}} />
         <CustomInput icon="pass" pht="Mobile No" style={{marginBottom: 40}} />
-        <CustomButton title="Sign In" w={180} type={''} onPressFn={undefined} />
+        <CustomButton
+          title="Sign In"
+          w={180}
+          type={''}
+          onPressFn={submitClicked}
+        />
       </ImageBackground>
     </View>
   );

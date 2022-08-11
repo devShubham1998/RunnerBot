@@ -8,6 +8,8 @@ import NotContactedCases from '../screens/NotContactedCases.srceen';
 import UpdateContact from '../screens/UpdateContact.screen';
 import OtherActivities from '../screens/OtherActivities.screen';
 import LoginScreen from '../screens/Login.screen';
+import PastAppointment from '../screens/PastAppointment.screen';
+import TransferAppointments from '../screens/TransferAppointments.screen';
 
 const Stack = createNativeStackNavigator();
 
@@ -58,6 +60,24 @@ const StackNavigator = () => {
           headerShown: true,
           orientation: 'portrait',
           headerTitle: 'Other Activities',
+        }}
+      />
+      <Stack.Screen
+        name="PastAppointment"
+        component={PastAppointment}
+        options={{
+          headerShown: true,
+          orientation: 'portrait',
+          headerTitle: 'Past Appointments',
+        }}
+      />
+      <Stack.Screen
+        name="TransferAppointments"
+        component={TransferAppointments}
+        options={{
+          headerShown: true,
+          orientation: 'portrait',
+          headerTitle: 'Transfer Appointments',
         }}
       />
     </Stack.Navigator>
